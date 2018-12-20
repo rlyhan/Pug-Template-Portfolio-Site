@@ -1,0 +1,56 @@
+{
+  "projects": [
+    {
+      "id": 0,
+      "project_name": "Random Quote Generator",
+      "description": "A site displaying different quotes upon clicking 'Show Another Quote'.",
+      "technologies": ["html", "css", "javascript"],
+      "live_link": "https://rlyhan.github.io/techdegree-project-1/",
+      "github_link": "https://github.com/rlyhan/techdegree-project-1",
+      "image_urls": ["../images/01-quotegen-main", "../images/01-quotegen-1",
+                     "../images/01-quotegen-2"]
+    },
+    {
+      "id": 1,
+      "project_name": "Pagination & Content Filter",
+      "description": "A directory displaying students with a search option which limits number of pages based on search query.",
+      "technologies": ["html", "css", "javascript"],
+      "live_link": "https://rlyhan.github.io/techdegree-project-2/",
+      "github_link": "https://github.com/rlyhan/techdegree-project-2",
+      "image_urls": ["../images/02-pagfilter-main", "../images/02-pagfilter-1",
+                     "../images/02-pagfilter-2"]
+    },
+    {
+      "id": 2,
+      "project_name": "Interactive Form",
+      "description": "A registration form for a conference that will display error messages unless all info is entered correctly,
+                      along with checkboxes for activities that are filtered upon selection based on any conflicting activities.",
+      "technologies": ["html", "css", "javascript"],
+      "live_link": "https://rlyhan.github.io/techdegree-project-3/",
+      "github_link": "https://github.com/rlyhan/techdegree-project-3",
+      "image_urls": ["../images/03-intform-main", "../images/03-intform-1",
+                     "../images/03-intform-2"]
+    },
+    {
+      "id": 3,
+      "project_name": "Tic-Tac-Toe",
+      "description": "An in-browser Tic-Tac-Toe game. Enter your name and play against a programmed opponent.",
+      "technologies": ["html", "css", "javascript"],
+      "live_link": "https://rlyhan.github.io/techdegree-project-4/",
+      "github_link": "https://github.com/rlyhan/techdegree-project-4",
+      "image_urls": ["../images/04-tictactoe-main", "../images/04-tictactoe-1",
+                     "../images/04-tictactoe-2"]
+    },
+    {
+      "id": 4,
+      "project_name": "Employee Directory",
+      "description": "A directory displaying twelve different employees. Upon clicking a specific employee,
+                      an overlay appears showing extra information for them. Device responsive layout.",
+      "technologies": ["html", "css", "javascript"],
+      "live_link": "https://rlyhan.github.io/techdegree-project-5/",
+      "github_link": "https://github.com/rlyhan/techdegree-project-5",
+      "image_urls": ["../images/05-empdir-main", "../images/05-empdir-1",
+                     "../images/05-empdir-2"]
+    }
+  ]
+}
