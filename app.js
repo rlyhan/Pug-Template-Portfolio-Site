@@ -2,35 +2,67 @@
  * Setup of server, routes and middleware
  */
 
-// Require necessary dependencies
+/*
+ * Require necessary dependencies
+ */
 const express = require('express');
-const router = express.Router();
-const { data } = require('./data.json');
+const data = require('./data.json');
 
-// Set up middleware
+/*
+ * Creates Express application
+ */
 const app = express();
 app.set('view engine', 'pug');
-express.static('public');
+app.use('/static', express.static('public'));
 
-// Set up routes and start server
-router.get('/', (req, res) => {
-  // res.locals = data.projects;
+/*
+ * Renders the index page
+ */
+app.get('/', (req, res) => {
+  res.locals = data.projects;
+  res.render('index', {
+    projects: res.locals
+  });
 });
-router.get('/about', (req, res) => {
 
+/*
+ * Renders the about page
+ */
+app.get('/about', (req, res) => {
+  res.render('about');
 });
-router.post('/project', (req, res) => {
 
+/*
+ * Renders a project page based on the id of the project clicked
+ */
+app.get('/project_:id', (req, res) => {
+  res.locals = data.projects;
+  res.render('project', {
+    project: res.locals[req.params.id]
+  });
 });
-// app.get('views/index', (req, res) => {
-//   res.render('index');
-//   res.locals = data.projects;
-// });
-// app.get('views/about', (req, res) => {
-//   res.render('about');
-// });
+
+/*
+ * Sets up error message and status
+ */
+app.use((req, res, next) => {
+  const err = new Error('The page you are looking for does not exist.');
+  err.status = 404;
+  next(err);
+});
+
+/*
+ * Renders the error page
+ */
+app.use((err, req, res, next) => {
+  res.locals.error = err;
+  console.log('Error: The page you are looking for does not exist.');
+  res.render('error');
+});
+
+/*
+ * Make the application run on port 3000
+ */
 app.listen(3000, () => {
     console.log('The application is running on localhost:3000!')
 });
-
-module.exports = router;

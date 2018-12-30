@@ -443,7 +443,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: #fefefe;
+  background: #fff6dd;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: 1.5;
@@ -4984,14 +4984,32 @@ table.hover:not(.unstriped) tr:nth-of-type(even):hover {
   .tabs-panel.is-active {
     display: block; }
 
+.project-container {
+  display: inline-block;
+  position: relative;
+}
+
 .thumbnail {
   display: inline-block;
+  position: relative;
   max-width: 100%;
-  margin-bottom: 1rem;
-  border: solid 4px #fefefe;
-  border-radius: 0;
-  box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+  box-shadow: 5px 5px 3px rgba(10, 10, 10, 0.2);
   line-height: 0; }
+
+.thumbnail-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: calc(100% - 5px);
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease; }
+
+.project-container:hover .thumbnail-overlay {
+  opacity: 0.7;
+  background: #111111; }
 
 a.thumbnail {
   transition: box-shadow 200ms ease-out; }
